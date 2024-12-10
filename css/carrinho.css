@@ -60,11 +60,7 @@ img *{
       
     }
   
-    @media screen and (max-height: 400px) {
-      .one {
-        width: 10%;
-      }
-    }
+
   
     .meio {
       text-align: center;
@@ -127,10 +123,7 @@ img *{
       padding: 0 14px;
     }
   
-    @media screen and (max-width: 508px) {
-      .card .column {
-        width: 10px;}
-    }
+
   
     .card {
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
@@ -221,27 +214,7 @@ img *{
     .espaco {
       margin: 100px; 
     }
-    @media screen and (max-width: 1200px) {
-      .card {
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
-        padding: 10px; 
-        text-align: center;
-        margin: 15px;
-        width: 150px;
-        height: 355px; 
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        background-color: #bd9c738b;
-        background-image: linear-gradient(135deg, #f0eaf0 55%, transparent 80% 45%);
-        transition: transform .5s ease;
-      }
-    
-      .card:hover {
-        -webkit-transform: scale(1.1);
-        transform: scale(1.07);
-      }
-    }
+
   
     .contados p{
     margin-left: 450px;
@@ -501,4 +474,116 @@ input[type="radio"]:checked + .cartao {
 .myButton:active {
   position: relative;
   top: 1px;
+}
+/* Responsividade para telas de notebooks e menores */
+@media screen and (max-width: 1366px) {
+  body {
+      padding: 0;
+      margin: 0;
+  }
+
+  .retangulo {
+      width: 95%;
+      padding: 3%;
+  }
+
+  .quadrado, .quadrado_lateral {
+      width: 100%;
+      margin: 10px auto;
+      box-sizing: border-box;
+  }
+
+  nav ul {
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+
+  nav ul li {
+      margin: 10px;
+  }
+
+  .quadradinho {
+      height: 200px;
+      width: 150px;
+  }
+
+  .quadradinho img {
+      max-height: 150px;
+      max-width: 150px;
+  }
+
+  .search-container .search-input {
+      width: 300px;
+  }
+
+  .img_cartao {
+      margin: 0 auto;
+  }
+
+  .cartao {
+      flex-direction: column;
+      justify-content: center;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .quadradinho {
+      width: 120px;
+      height: 180px;
+  }
+
+  .quadrado_lateral {
+      margin-top: 0;
+  }
+
+  .search-input {
+      width: 250px;
+  }
+
+  .quadradinho img {
+      max-width: 120px;
+      max-height: 180px;
+  }
+
+  .imgFundo img {
+      width: 100%;
+      height: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .quadrado {
+      display: block;
+      padding: 10px;
+  }
+
+  .quadradinho {
+      width: 100px;
+      height: 150px;
+      margin: 0 auto;
+  }
+
+  .quadrado_lateral {
+      margin-left: 0;
+      margin-top: 20px;
+      width: 90%;
+  }
+
+  .retangulo {
+      padding: 5%;
+  }
+
+  nav ul {
+      flex-direction: column;
+  }
+
+  .cartao img {
+      max-width: 100px;
+      height: auto;
+  }
+
+  .myButton {
+      display: block;
+      margin: 20px auto;
+  }
 }
