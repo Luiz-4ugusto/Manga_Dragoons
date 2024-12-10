@@ -576,11 +576,12 @@ nav a:hover {
     margin: 0;
   }
 
+  /* Ajustando o retângulo para ocupar 100% da tela */
   .retangulo {
     display: flex;
-    flex-direction: column; /* Alinha itens verticalmente */
-    align-items: center; /* Centraliza os itens */
-    width: 95%;
+    flex-wrap: wrap; /* Permite que os cards quebrem linha */
+    justify-content: center; /* Centraliza os cards */
+    width: 100%; /* Faz o retângulo ocupar 100% da tela */
     padding: 2%;
     margin: 0 auto;
   }
@@ -643,9 +644,8 @@ nav a:hover {
 
   /* Ajuste dos cards para telas pequenas */
   .retangulo .card {
-    width: 100%; /* Cards ocupam toda a largura disponível */
-    max-width: 320px; /* Define um tamanho máximo para os cards */
-    margin: 10px auto; /* Centraliza os cards horizontalmente */
+    width: 250px; /* Definindo a largura dos cards como 250px */
+    margin: 10px; /* Espaçamento entre os cards */
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -690,7 +690,7 @@ nav a:hover {
   /* Ajuste para telas menores que 450px */
   @media screen and (max-width: 450px) {
     .retangulo .card {
-      max-width: 200px; /* Cards ocupam 90% da largura da tela */
+      max-width: 90%; /* Cards ocupam 90% da largura da tela */
       padding: 10px; /* Reduz o padding para melhorar o layout */
     }
 
