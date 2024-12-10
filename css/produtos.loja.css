@@ -160,13 +160,7 @@
 
   }
   
-  @media screen and (max-width: 1200px) {
-    .column {
-      width: 100%;
-      display: block;
-      margin-bottom: 20px;
-    }
-  }
+ 
   .box {
     height: 80px;
     display: flex;
@@ -581,4 +575,120 @@ nav a:hover {
 
 .navbar a:hover {
   transform: scale(1.1);
+}
+
+/* Estilo padrão para telas grandes já existente */
+
+/* Responsivo para telas de notebook (até 1366px de largura) */
+@media screen and (max-width: 1366px) {
+  /* Ajusta o layout do container principal */
+  .retangulo {
+    width: 95%;
+    padding: 4%;
+  }
+
+  /* Ajusta a largura das colunas */
+  .column, .column1, .column2, .column3 {
+    float: none;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+  }
+
+  /* Redimensiona as imagens e textos */
+  .card img, .card1 img {
+    width: 100%;
+    height: auto;
+  }
+
+  .card, .card1, .card2, .card3 {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  /* Reduz o tamanho do input e dos botões */
+  .search-input {
+    width: 80%;
+  }
+
+  .caixa_num {
+    width: 120px;
+  }
+
+  .num {
+    width: 30px;
+    height: 30px;
+  }
+
+  /* Ajusta o menu */
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul li {
+    margin-bottom: 10px;
+  }
+
+  /* Centraliza os itens do footer */
+  footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer a {
+    margin: 10px;
+  }
+
+  footer p {
+    font-size: 14px;
+  }
+
+  /* Avaliações e avaliações de produto */
+  .review-container {
+    flex-direction: column;
+  }
+
+  #review {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  #enviar-review {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* Ajusta a exibição do sistema de estrelas */
+  .star-rating {
+    font-size: 1.5em;
+  }
+
+  /* Navbar */
+  .navbar {
+    max-width: 100%;
+    margin-left: 0;
+  }
+}
+
+/* Responsivo para telas menores que 1024px (opcional) */
+@media screen and (max-width: 1024px) {
+  /* Ajustes adicionais para telas ainda menores */
+  .search-input {
+    width: 100%;
+  }
+
+  .imgFundo img {
+    width: 100%;
+    height: auto;
+  }
+
+  nav ul li {
+    margin-bottom: 5px;
+  }
+
+  nav a {
+    padding: 0.5rem 0.8rem;
+    font-size: 14px;
+  }
 }
