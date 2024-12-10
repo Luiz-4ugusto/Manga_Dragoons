@@ -690,10 +690,13 @@ nav a:hover {
   /* Ajuste para telas menores que 450px */
   @media screen and (max-width: 450px) {
     .retangulo .card {
-      max-width: 90%; /* Cards ocupam 90% da largura da tela */
+      max-width: 200px; /* Cards ocupam 90% da largura da tela */
       padding: 10px; /* Reduz o padding para melhorar o layout */
     }
-
+    .retangulo {
+      width: 100%;
+      height: auto;
+    }
     .retangulo .card img {
       width: 100%; /* Aumenta a largura da imagem */
       max-height: 250px; /* Aumenta a altura máxima das imagens */
