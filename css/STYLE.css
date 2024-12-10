@@ -145,18 +145,14 @@ p {
   padding: 0 14px;
 }
 
-@media screen and (max-width: 508px) {
-  .card .column {
-    width: 10px;
-  }
-}
+
 
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   padding: 10px;
   text-align: center;
   margin: 15px;
-  height: 355px;
+  height: 375px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -240,27 +236,6 @@ p {
 
 .espaco {
   margin: 100px;
-}
-@media screen and (max-width: 1200px) {
-  .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    padding: 10px;
-    text-align: center;
-    margin: 15px;
-    width: 150px;
-    height: 355px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: #bd9c738b;
-    background-image: linear-gradient(135deg, #f0eaf0 55%, transparent 80% 45%);
-    transition: transform 0.5s ease;
-  }
-
-  .card:hover {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.07);
-  }
 }
 
 .contados p {
@@ -438,3 +413,277 @@ nav a:hover {
 .autocomplete-suggestion:hover {
   background-color: #f0f0f0;
 }
+/* Responsividade para telas de notebooks */
+@media screen and (max-width: 1366px) {
+  body {
+    background-size: cover; /* Ajusta o tamanho do fundo */
+    padding: 0; /* Remove padding extra */
+  }
+
+  .retangulo {
+    width: 95%; /* Aumenta a largura do conteúdo */
+    padding: 2%; /* Reduz padding */
+  }
+
+  .imgFundo img {
+    width: 100%; /* Ajusta imagem ao tamanho do container */
+    height: auto;
+  }
+
+  header .one img {
+    width: 120px;
+    height: 120px;
+    border: 5px solid #bca573;
+  }
+
+  nav ul {
+    flex-wrap: wrap; /* Permite que o menu quebre linhas */
+    justify-content: center;
+    font-size: 13px;
+  }
+
+  .column {
+    width: 30%; /* Reduz a largura das colunas */
+    margin: 10px; /* Adiciona espaçamento */
+  }
+
+  .card {
+    height: auto; /* Permite altura dinâmica */
+    padding: 8px; /* Reduz o padding */
+    margin: 10px;
+  }
+
+  .card img {
+    max-height: 180px; /* Define altura máxima das imagens */
+  }
+
+  .search-input {
+    width: 100%; /* Input ocupa a largura máxima */
+  }
+
+  footer {
+    flex-direction: column; /* Alinha o footer verticalmente */
+    align-items: center;
+  }
+}
+
+
+/* Responsividade para telas de notebooks */
+@media screen and (max-width: 1032px) and (min-width: 768px) {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    background-size: cover;
+    padding: 0;
+    margin: 0;
+  }
+
+  .retangulo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    width: 95%;
+    padding: 2%;
+    margin: 0 auto;
+  }
+
+  .imgFundo img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column; /* Garante que logo e logotipo fiquem em coluna */
+    align-items: center; /* Centraliza os itens */
+    margin-bottom: 20px;
+  }
+
+  header .one img {
+    width: 120px;
+    height: 120px;
+    border: 5px solid #bca573;
+    margin-bottom: 10px; /* Espaço entre a logo e o logotipo */
+  }
+
+  header .logotipo {
+    font-size: 18px;
+    text-align: center;
+    color: #bca573;
+  }
+
+  nav ul {
+    display: flex;
+    flex-wrap: wrap; /* Permite quebra de linha */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    gap: 10px; /* Espaçamento entre os itens */
+    font-size: 13px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .search-bar {
+    display: flex;
+    flex-direction: column; /* Organiza os elementos da barra de pesquisa em coluna */
+    align-items: center;
+    margin: 20px 0; /* Espaçamento vertical */
+  }
+
+  .search-input {
+    width: 90%; /* Ajusta largura ao centro */
+    max-width: 500px; /* Define um limite de largura */
+    padding: 10px;
+    margin-bottom: 10px; /* Espaço abaixo do input */
+  }
+
+  .filters {
+    display: flex;
+    justify-content: center; /* Centraliza os filtros */
+    gap: 15px; /* Espaçamento entre os filtros */
+  }
+
+  footer {
+    display: flex;
+    flex-direction: row; /* Garante que os itens fiquem lado a lado */
+    justify-content: space-between; /* Distribui os itens ao longo do footer */
+    align-items: center; /* Centraliza verticalmente */
+    gap: 20px;
+    padding: 20px;
+  }
+
+  footer .item {
+    flex: 1; /* Garante espaçamento uniforme entre os itens */
+    text-align: center; /* Alinha cada item individualmente ao centro */
+  }
+
+  .mode-switch, .filtro, .extra-item {
+    margin: 0 auto; /* Centraliza esses elementos */
+  }
+}
+
+@media screen and (max-width: 767px) {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    background-size: cover;
+    padding: 0;
+    margin: 0;
+  }
+
+  .retangulo {
+    display: flex;
+    flex-direction: column; /* Alinha itens verticalmente */
+    align-items: center; /* Centraliza os itens */
+    width: 95%;
+    padding: 2%;
+    margin: 0 auto;
+  }
+
+  .imgFundo img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column; /* Mantém logo e logotipo em coluna */
+    align-items: center; /* Centraliza os itens */
+    margin-bottom: 20px;
+  }
+
+  header .one img {
+    width: 100px; /* Tamanho reduzido para telas menores */
+    height: 100px;
+    border: 4px solid #bca573;
+    margin-bottom: 10px;
+  }
+
+  header .logotipo {
+    font-size: 16px;
+    text-align: center;
+    color: #bca573;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column; /* Navegação em coluna */
+    align-items: center; /* Centraliza os itens */
+    gap: 8px; /* Espaçamento entre os itens */
+    font-size: 12px;
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+  }
+
+  .search-bar {
+    display: flex;
+    flex-direction: row; /* Organiza em linha */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: space-between; /* Distribui os itens horizontalmente */
+    width: 100%; /* Usa a largura total */
+    margin: 20px 0; /* Espaçamento vertical */
+    gap: 10px; /* Espaçamento entre os itens */
+  }
+
+  .search-input {
+    flex: 1; /* Faz o input ocupar o máximo de espaço possível */
+    padding: 8px;
+  }
+
+  .filters, .mode-switch {
+    flex-shrink: 0; /* Evita que esses elementos diminuam muito de tamanho */
+  }
+
+  .retangulo .card {
+    width: 100%; /* Cards ocupam a largura total */
+    max-width: 350px; /* Define uma largura máxima */
+    margin: 10px auto; /* Centraliza os cards horizontalmente */
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+  }
+
+  .retangulo .card img {
+    width: 100%; /* Imagem ocupa toda a largura do card */
+    height: auto; /* Ajusta a altura proporcionalmente */
+    max-height: 200px; /* Define uma altura máxima */
+    border-radius: 5px;
+    object-fit: cover; /* Garante que a imagem seja ajustada corretamente */
+  }
+
+  .retangulo .card h3 {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+
+  .retangulo .card p {
+    font-size: 14px;
+    color: #666;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column; /* Footer em coluna */
+    align-items: center; /* Centraliza os itens */
+    gap: 10px; /* Espaçamento entre os itens */
+    padding: 15px 0;
+  }
+
+  footer .item {
+    text-align: center; /* Centraliza cada item do footer */
+  }
+
+  .mode-switch, .filtro, .extra-item {
+    margin: 0 auto; /* Centraliza os elementos */
+  }
+}
+
