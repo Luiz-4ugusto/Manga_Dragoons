@@ -641,9 +641,10 @@ nav a:hover {
     flex-shrink: 0; /* Evita que esses elementos diminuam muito de tamanho */
   }
 
+  /* Ajuste dos cards para telas pequenas */
   .retangulo .card {
-    width: 100%; /* Cards ocupam a largura total */
-    max-width: 350px; /* Define uma largura máxima */
+    width: 100%; /* Cards ocupam toda a largura disponível */
+    max-width: 320px; /* Define um tamanho máximo para os cards */
     margin: 10px auto; /* Centraliza os cards horizontalmente */
     background-color: #fff;
     border: 1px solid #ccc;
@@ -684,6 +685,29 @@ nav a:hover {
 
   .mode-switch, .filtro, .extra-item {
     margin: 0 auto; /* Centraliza os elementos */
+  }
+
+  /* Ajuste para telas menores que 450px */
+  @media screen and (max-width: 450px) {
+    .retangulo .card {
+      max-width: 90%; /* Cards ocupam 90% da largura da tela */
+      padding: 10px; /* Reduz o padding para melhorar o layout */
+    }
+
+    .search-bar {
+      flex-direction: column; /* Organiza os filtros e barra de pesquisa em coluna */
+      align-items: center; /* Centraliza tudo */
+      gap: 10px; /* Espaçamento entre os itens */
+    }
+
+    .search-input {
+      width: 100%; /* Input ocupa toda a largura disponível */
+    }
+
+    .filters, .mode-switch {
+      width: 100%; /* Filtros ocupam toda a largura */
+      text-align: center; /* Centraliza o texto dentro dos filtros */
+    }
   }
 }
 
